@@ -2,7 +2,7 @@
 
 import { useState, useEffect } from 'react';
 import Image from 'next/image';
-import { ArrowRight, ChevronLeft, ChevronRight, ShieldCheck } from 'lucide-react';
+import { ArrowRight, ShieldCheck } from 'lucide-react';
 import type { IHeroSlide } from '@/types';
 
 interface HeroSectionProps {
@@ -63,26 +63,9 @@ export default function HeroSection({ slides }: HeroSectionProps) {
             </a>
           </div>
 
-          {/* Slider Controls */}
+          {/* Slider Controls — desktop only (below text) */}
           {slides.length > 1 && (
-            <div className="flex items-center gap-4 sm:gap-8 mt-8 sm:mt-16 pt-6 sm:pt-8 border-t border-border/50">
-              <div className="flex items-center gap-3">
-                <button 
-                  onClick={() => setCurrent((current - 1 + slides.length) % slides.length)}
-                  className="w-12 h-12 rounded-full border border-border/80 bg-white flex items-center justify-center text-foreground hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm"
-                  aria-label="Slide sebelumnya"
-                >
-                  <ChevronLeft className="w-5 h-5 -ml-0.5" />
-                </button>
-                <button 
-                  onClick={() => setCurrent((current + 1) % slides.length)}
-                  className="w-12 h-12 rounded-full border border-border/80 bg-white flex items-center justify-center text-foreground hover:bg-primary hover:text-white hover:border-primary transition-all shadow-sm"
-                  aria-label="Slide berikutnya"
-                >
-                  <ChevronRight className="w-5 h-5 -mr-0.5" />
-                </button>
-              </div>
-              
+            <div className="hidden lg:flex items-center gap-8 mt-16 pt-8 border-t border-border/50">           
               <div className="flex gap-2.5">
                 {slides.map((_, i) => (
                   <button
@@ -119,14 +102,30 @@ export default function HeroSection({ slides }: HeroSectionProps) {
               <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent pointer-events-none" />
             </div>
           ))}
-          
+
+          {/* Slider Controls — mobile only (overlay on image) */}
+          {slides.length > 1 && (
+            <div className="lg:hidden absolute bottom-4 left-1/2 -translate-x-1/2 z-20 flex gap-2 bg-black/30 backdrop-blur-sm px-4 py-2 rounded-full">
+              {slides.map((_, i) => (
+                <button
+                  key={i}
+                  onClick={() => setCurrent(i)}
+                  className={`h-2 rounded-full transition-all duration-500 ${
+                    i === current ? 'w-8 bg-white' : 'w-2 bg-white/40 hover:bg-white/70'
+                  }`}
+                  aria-label={`Ke slide ${i + 1}`}
+                />
+              ))}
+            </div>
+          )}
+               
           {/* Floating Trust Metric overlaying the image */}
-          <div className="absolute bottom-6 sm:bottom-10 left-6 sm:left-10 z-20 bg-white/95 backdrop-blur-md p-5 rounded-2xl shadow-xl flex items-center gap-4">
-            <div className="w-12 h-12 rounded-full bg-primary/10 flex items-center justify-center">
-              <span className="text-xl font-bold text-primary">25+</span>
+          <div className="absolute bottom-12 sm:bottom-10 left-6 sm:left-10 z-20 bg-white/95 backdrop-blur-md p-4 sm:p-5 rounded-2xl shadow-xl flex items-center gap-3 sm:gap-4">
+            <div className="w-10 h-10 sm:w-12 sm:h-12 rounded-full bg-primary/10 flex items-center justify-center">
+              <span className="text-lg sm:text-xl font-bold text-primary">25+</span>
             </div>
             <div>
-              <p className="text-sm font-bold text-foreground">Tahun Keunggulan</p>
+              <p className="text-xs sm:text-sm font-bold text-foreground">Tahun Keunggulan</p>
               <p className="text-xs text-muted">Membangun Kepercayaan</p>
             </div>
           </div>

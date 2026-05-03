@@ -24,7 +24,7 @@ export default function AboutSection({ company }: AboutSectionProps) {
     certifications: ['ISO 9001:2015', 'ISO 14001:2015', 'OHSAS 18001'],
   };
   return (
-    <section id="tentang" className="section-padding bg-white" aria-labelledby="tentang-heading">
+    <section id="tentang" className="section-padding bg-white overflow-hidden" aria-labelledby="tentang-heading">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid lg:grid-cols-2 gap-12 lg:gap-20 items-center">
           {/* Text Content */}

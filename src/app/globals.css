@@ -19,10 +19,11 @@
   --font-body: var(--font-inter);
 }
 
-/* Smooth scrolling */
+/* Smooth scrolling & prevent horizontal overflow on mobile */
 html {
   scroll-behavior: smooth;
   scroll-padding-top: 80px;
+  overflow-x: hidden;
 }
 
 /* Custom selection */
