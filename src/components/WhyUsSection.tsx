@@ -25,7 +25,7 @@ const reasons = [
 export default function WhyUsSection() {
   return (
     <section className="section-padding bg-surface-alt relative overflow-hidden" aria-labelledby="whyus-heading">
-      <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-1/2" />
+      <div className="absolute top-0 right-0 w-1/3 h-full bg-primary/5 -skew-x-12 translate-x-1/2 hidden sm:block" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         {/* Header */}

@@ -52,7 +52,7 @@ export default async function ServiceDetailPage({ params }: Props) {
           />
 
           <div className="mt-8 grid lg:grid-cols-2 gap-12 lg:gap-20 items-start">
-            <div className="relative h-[400px] lg:h-[600px] w-full rounded-3xl overflow-hidden shadow-2xl">
+            <div className="relative h-[280px] sm:h-[350px] lg:h-[600px] w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl">
               <Image
                 src={service.image}
                 alt={service.title}
@@ -63,7 +63,7 @@ export default async function ServiceDetailPage({ params }: Props) {
             </div>
 
             <div className="py-4">
-              <h1 className="text-4xl md:text-5xl font-bold font-heading text-foreground mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-foreground mb-4 sm:mb-6">
                 {service.title}
               </h1>
               

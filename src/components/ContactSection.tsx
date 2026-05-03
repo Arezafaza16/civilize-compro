@@ -130,7 +130,7 @@ export default function ContactSection({ companyInfo }: ContactSectionProps) {
 
           {/* Contact Form */}
           <AnimateOnScroll animation="fade-left">
-            <div className="bg-white p-8 md:p-10 rounded-3xl shadow-xl border border-border/50">
+            <div className="bg-white p-6 sm:p-8 md:p-10 rounded-2xl sm:rounded-3xl shadow-xl border border-border/50">
               <h3 className="text-2xl font-bold font-heading mb-6">Kirim Pesan</h3>
               
               {submitStatus === 'success' && (

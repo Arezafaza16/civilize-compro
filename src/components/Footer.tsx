@@ -45,7 +45,7 @@ export default function Footer({ companyInfo }: FooterProps) {
       <h2 id="footer-heading" className="sr-only">Footer</h2>
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12 mb-16">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-10 sm:gap-12 mb-16">
           {/* Brand Info */}
           <div className="space-y-6">
             <Link href="/" className="inline-block text-3xl font-bold text-white font-heading tracking-tight">

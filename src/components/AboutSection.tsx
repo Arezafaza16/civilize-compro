@@ -91,12 +91,12 @@ export default function AboutSection({ company }: AboutSectionProps) {
                   alt="Tim Civilize sedang bekerja di proyek konstruksi"
                   width={800}
                   height={600}
-                  className="w-full h-[500px] object-cover"
+                  className="w-full h-[300px] sm:h-[400px] lg:h-[500px] object-cover"
                 />
               </div>
 
               {/* Floating card */}
-              <div className="absolute -bottom-6 -left-6 bg-white rounded-xl shadow-xl p-6 max-w-[240px] border border-border">
+              <div className="absolute -bottom-6 left-0 sm:-left-6 bg-white rounded-xl shadow-xl p-4 sm:p-6 max-w-[200px] sm:max-w-[240px] border border-border">
                 <div className="text-3xl font-bold text-primary font-heading mb-1">25+</div>
                 <p className="text-muted text-sm">Tahun pengalaman membangun kepercayaan & kualitas</p>
               </div>

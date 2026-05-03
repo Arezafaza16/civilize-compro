@@ -33,7 +33,7 @@ export default function TeamSection({ team }: TeamSectionProps) {
           </AnimateOnScroll>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 sm:gap-6 lg:gap-8">
           {team.map((member, index) => (
             <AnimateOnScroll key={member.slug} animation="fade-up" delay={index * 0.1}>
               <div className="group relative rounded-2xl overflow-hidden bg-surface-alt border border-border transition-all duration-300 hover:shadow-xl">
@@ -60,7 +60,7 @@ export default function TeamSection({ team }: TeamSectionProps) {
                   </div>
                 </div>
                 
-                <div className="p-6 bg-white relative z-10 -translate-y-4 mx-4 rounded-xl shadow-lg text-center group-hover:-translate-y-6 transition-transform duration-300 min-h-[88px] flex flex-col justify-center">
+                <div className="p-4 sm:p-6 bg-white relative z-10 -translate-y-4 mx-3 sm:mx-4 rounded-xl shadow-lg text-center group-hover:-translate-y-6 transition-transform duration-300 min-h-[80px] sm:min-h-[88px] flex flex-col justify-center">
                   <h3 className="font-bold text-lg text-foreground font-heading line-clamp-1" title={member.name}>{member.name}</h3>
                   <p className="text-primary text-sm font-medium line-clamp-1" title={member.role}>{member.role}</p>
                 </div>

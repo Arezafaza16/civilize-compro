@@ -28,7 +28,7 @@ export default function TestimonialsSection({ testimonials }: TestimonialSection
 
   return (
     <section className="section-padding bg-zinc-900 text-white relative overflow-hidden" aria-labelledby="testimonials-heading">
-      <div className="absolute top-0 left-0 w-1/2 h-full bg-primary/10 -skew-x-12 -translate-x-1/2" />
+      <div className="absolute top-0 left-0 w-1/2 h-full bg-primary/10 -skew-x-12 -translate-x-1/2 hidden sm:block" />
       
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative">
         <div className="text-center max-w-2xl mx-auto mb-16">
@@ -45,7 +45,7 @@ export default function TestimonialsSection({ testimonials }: TestimonialSection
 
         <div className="max-w-4xl mx-auto relative">
           <AnimateOnScroll animation="scale">
-            <div className="bg-zinc-800/50 backdrop-blur-md border border-zinc-700 p-8 md:p-12 rounded-3xl relative">
+            <div className="bg-zinc-800/50 backdrop-blur-md border border-zinc-700 p-6 sm:p-8 md:p-12 rounded-2xl sm:rounded-3xl relative">
               <Quote className="absolute top-6 right-6 w-20 h-20 text-white/5 rotate-180" />
               
               <div className="flex flex-col items-center text-center relative z-10">
@@ -55,7 +55,7 @@ export default function TestimonialsSection({ testimonials }: TestimonialSection
                   ))}
                 </div>
                 
-                <p className="text-xl md:text-2xl font-medium leading-relaxed mb-8 italic text-zinc-200 min-h-[120px] transition-opacity duration-500">
+                <p className="text-base sm:text-xl md:text-2xl font-medium leading-relaxed mb-6 sm:mb-8 italic text-zinc-200 min-h-[80px] sm:min-h-[120px] transition-opacity duration-500">
                   "{testimonials[currentIndex].content}"
                 </p>
                 

@@ -27,7 +27,7 @@ export default function HeroSection({ slides }: HeroSectionProps) {
 
   return (
     <section 
-      className="relative h-screen min-h-[750px] max-h-[1080px] flex items-center bg-surface overflow-hidden" 
+      className="relative min-h-screen lg:h-screen lg:max-h-[1080px] flex items-center bg-surface overflow-hidden py-24 lg:py-0" 
       id="beranda"
       aria-label="Banner utama"
     >
@@ -35,21 +35,21 @@ export default function HeroSection({ slides }: HeroSectionProps) {
       <div className="absolute top-0 right-0 w-2/3 h-full bg-primary/5 rounded-bl-[150px] pointer-events-none" />
       <div className="absolute -bottom-32 -left-32 w-96 h-96 bg-primary/5 rounded-full blur-3xl pointer-events-none" />
 
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 grid lg:grid-cols-2 gap-16 lg:gap-12 items-center">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full relative z-10 grid lg:grid-cols-2 gap-8 lg:gap-12 items-center">
         
         {/* TEXT CONTENT (Left) */}
-        <div className="max-w-2xl h-[420px] sm:h-[400px] lg:h-[480px] flex flex-col justify-center">
+        <div className="max-w-2xl flex flex-col justify-center">
           {/* Trust Badge */}
           <div className="inline-flex items-center gap-2.5 bg-white border border-border shadow-sm rounded-full px-5 py-2 mb-8">
             <ShieldCheck className="w-5 h-5 text-primary" />
             <span className="text-sm font-bold tracking-wider text-foreground/80 uppercase">Civilize Construction</span>
           </div>
 
-          <h1 className="text-4xl sm:text-5xl lg:text-6xl xl:text-[4rem] font-bold font-heading text-foreground leading-[1.15] mb-6">
+          <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-[4rem] font-bold font-heading text-foreground leading-[1.15] mb-4 sm:mb-6">
             {slide.title}
           </h1>
 
-          <p className="text-lg md:text-xl text-muted mb-10 leading-relaxed max-w-xl">
+          <p className="text-base sm:text-lg md:text-xl text-muted mb-6 sm:mb-10 leading-relaxed max-w-xl">
             {slide.subtitle}
           </p>
 
@@ -65,7 +65,7 @@ export default function HeroSection({ slides }: HeroSectionProps) {
 
           {/* Slider Controls */}
           {slides.length > 1 && (
-            <div className="flex items-center gap-8 mt-16 pt-8 border-t border-border/50">
+            <div className="flex items-center gap-4 sm:gap-8 mt-8 sm:mt-16 pt-6 sm:pt-8 border-t border-border/50">
               <div className="flex items-center gap-3">
                 <button 
                   onClick={() => setCurrent((current - 1 + slides.length) % slides.length)}
@@ -100,7 +100,7 @@ export default function HeroSection({ slides }: HeroSectionProps) {
         </div>
 
         {/* IMAGE/Showcase (Right) */}
-        <div className="relative h-[500px] lg:h-[650px] w-full rounded-[2.5rem] overflow-hidden shadow-2xl ring-1 ring-border/50">
+        <div className="relative h-[300px] sm:h-[400px] lg:h-[650px] w-full rounded-2xl sm:rounded-[2.5rem] overflow-hidden shadow-2xl ring-1 ring-border/50">
           {slides.map((s, i) => (
             <div
               key={i}

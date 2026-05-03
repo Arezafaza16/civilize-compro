@@ -52,7 +52,7 @@ export default async function TeamDetailPage({ params }: Props) {
 
           <div className="mt-8 grid lg:grid-cols-12 gap-12 lg:gap-16 items-start">
             <div className="lg:col-span-4 space-y-6">
-              <div className="relative h-[500px] w-full rounded-3xl overflow-hidden shadow-xl">
+              <div className="relative h-[350px] sm:h-[420px] lg:h-[500px] w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-xl">
                 <Image
                   src={member.image}
                   alt={member.name}
@@ -72,7 +72,7 @@ export default async function TeamDetailPage({ params }: Props) {
 
             <div className="lg:col-span-8 py-4">
               <div className="mb-8">
-                <h1 className="text-4xl md:text-5xl font-bold font-heading text-foreground mb-4">
+                <h1 className="text-3xl sm:text-4xl md:text-5xl font-bold font-heading text-foreground mb-4">
                   {member.name}
                 </h1>
                 <p className="text-xl md:text-2xl font-semibold text-primary">

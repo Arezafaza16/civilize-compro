@@ -51,7 +51,7 @@ export default async function ProjectDetailPage({ params }: Props) {
           />
 
           {/* Hero Image */}
-          <div className="mt-8 relative h-[50vh] lg:h-[70vh] w-full rounded-3xl overflow-hidden shadow-2xl mb-12">
+          <div className="mt-6 sm:mt-8 relative h-[40vh] sm:h-[50vh] lg:h-[70vh] w-full rounded-2xl sm:rounded-3xl overflow-hidden shadow-2xl mb-8 sm:mb-12">
             <Image
               src={project.images[0]}
               alt={project.title}
@@ -59,14 +59,14 @@ export default async function ProjectDetailPage({ params }: Props) {
               className="object-cover"
               priority
             />
-            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-8 md:p-12">
+            <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent flex flex-col justify-end p-6 sm:p-8 md:p-12">
               <span className="inline-block bg-primary text-white px-4 py-1.5 rounded-full text-sm font-bold mb-4 w-max">
                 {project.category}
               </span>
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading text-white mb-4">
+              <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold font-heading text-white mb-3 sm:mb-4">
                 {project.title}
               </h1>
-              <p className="text-zinc-300 text-lg md:text-xl max-w-3xl">
+              <p className="text-zinc-300 text-sm sm:text-base md:text-lg lg:text-xl max-w-3xl line-clamp-3 sm:line-clamp-none">
                 {project.description}
               </p>
             </div>
@@ -74,7 +74,7 @@ export default async function ProjectDetailPage({ params }: Props) {
 
           <div className="grid lg:grid-cols-3 gap-12 items-start">
             {/* Quick Specs */}
-            <div className="lg:col-span-1 bg-white p-8 rounded-3xl shadow-lg border border-border/50 sticky top-32">
+            <div className="lg:col-span-1 bg-white p-6 sm:p-8 rounded-2xl sm:rounded-3xl shadow-lg border border-border/50 lg:sticky lg:top-32">
               <h3 className="text-2xl font-bold font-heading mb-8">Informasi Proyek</h3>
               
               <div className="space-y-6">

@@ -44,7 +44,7 @@ export default async function ProyekPage() {
             <TextReveal 
               text="Portofolio Kami" 
               as="h1" 
-              className="text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-6" 
+              className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-bold font-heading mb-4 sm:mb-6" 
             />
             <p className="text-white/80 text-lg md:text-xl max-w-2xl mx-auto leading-relaxed">
               Jelajahi deretan proyek unggulan yang membanggakan dari Civilize. Temukan bagaimana kami menerjemahkan visi menjadi struktur ikonik yang kokoh.
